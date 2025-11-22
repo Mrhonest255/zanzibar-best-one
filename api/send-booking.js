@@ -40,7 +40,16 @@ export default async function handler(req, res) {
     return res.status(405).json({ success: false, message: 'Method not allowed' });
   }
 
-  const data = req.body;
+  let data = req.body;
+  // Some runtimes may pass the body as a raw string; handle that defensively
+  if (!data || typeof data === 'string') {
+    try {
+      data = JSON.parse(typeof data === 'string' && data.length ? data : req.rawBody || '{}');
+    } catch (parseErr) {
+      console.error('Failed to parse request body as JSON:', parseErr);
+      return res.status(400).json({ success: false, message: 'Invalid JSON body' });
+    }
+  }
 
   try {
     const transporter = getTransporter();
