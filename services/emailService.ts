@@ -10,7 +10,10 @@ import { BookingRequest } from '../types';
  * Backend URL: http://localhost:3001/api/send-booking
  */
 
-const BACKEND_URL = 'http://localhost:3001/api/send-booking';
+// Prefer a Vite environment variable when deployed, otherwise use a
+// relative path so the frontend will call the same origin's API (Vercel).
+// Set `VITE_BACKEND_URL` to your deployed API root if needed.
+const BACKEND_URL = (import.meta as any).env?.VITE_BACKEND_URL || '/api/send-booking';
 
 export const sendBookingEmail = async (bookingData: BookingRequest): Promise<boolean> => {
   console.log("🚀 Attempting to send booking via Backend API...");
