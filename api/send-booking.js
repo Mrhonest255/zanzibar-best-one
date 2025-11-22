@@ -52,8 +52,9 @@ export default async function handler(req, res) {
   }
 
   try {
-    // Debug shortcut: if DEBUG_API is set, return incoming body/headers for inspection
-    if (process.env.DEBUG_API === '1') {
+    // Debug shortcut: if query ?debug=1 or DEBUG_API env is set, return incoming body/headers for inspection
+    const dbgQuery = req.query && (req.query.debug === '1' || req.query.debug === 'true');
+    if (dbgQuery || process.env.DEBUG_API === '1') {
       const raw = req.rawBody || (typeof req.body === 'string' ? req.body : JSON.stringify(req.body));
       return res.status(200).json({ success: true, debug: { headers: req.headers, rawBody: raw, parsedBody: data } });
     }
