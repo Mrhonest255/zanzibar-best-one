@@ -1,0 +1,69 @@
+{
+  "timestamp": "2025-11-22T07:02:15.012Z",
+  "toAdmin": "info@tripmatezanzibar.com",
+  "toClient": "agizanasi11@gmail.com",
+  "adminResult": {
+    "accepted": [
+      "info@tripmatezanzibar.com"
+    ],
+    "rejected": [],
+    "ehlo": [
+      "PIPELINING",
+      "SIZE 81788928",
+      "ETRN",
+      "AUTH PLAIN LOGIN",
+      "ENHANCEDSTATUSCODES",
+      "8BITMIME",
+      "SMTPUTF8",
+      "CHUNKING"
+    ],
+    "envelopeTime": 1042,
+    "messageTime": 403,
+    "messageSize": 2477,
+    "response": "250 2.0.0 Ok: queued as 4dD31G4rrBz8sWN",
+    "envelope": {
+      "from": "info@tripmatezanzibar.com",
+      "to": [
+        "info@tripmatezanzibar.com"
+      ]
+    },
+    "messageId": "<215eba6e-92b2-06d2-0fe8-6868ccde93b3@tripmatezanzibar.com>"
+  },
+  "clientResult": {
+    "accepted": [
+      "agizanasi11@gmail.com"
+    ],
+    "rejected": [],
+    "ehlo": [
+      "PIPELINING",
+      "SIZE 81788928",
+      "ETRN",
+      "AUTH PLAIN LOGIN",
+      "ENHANCEDSTATUSCODES",
+      "8BITMIME",
+      "SMTPUTF8",
+      "CHUNKING"
+    ],
+    "envelopeTime": 1077,
+    "messageTime": 415,
+    "messageSize": 3745,
+    "response": "250 2.0.0 Ok: queued as 4dD31L0Zl4z8sWN",
+    "envelope": {
+      "from": "info@tripmatezanzibar.com",
+      "to": [
+        "agizanasi11@gmail.com"
+      ]
+    },
+    "messageId": "<71008f4d-06b6-da78-5196-2bfa30fa9879@tripmatezanzibar.com>"
+  },
+  "payload": {
+    "fullName": "KHATIBU ALI KHATIBU",
+    "email": "agizanasi11@gmail.com",
+    "phone": "+255698120948",
+    "travelDate": "2025-11-22",
+    "travelers": 2,
+    "details": "I am interested in booking the Safari Blue Full Day Experience. Please let me know availability.",
+    "type": "tour",
+    "itemName": "Safari Blue Full Day Experience"
+  }
+}
